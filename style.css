@@ -1,0 +1,103 @@
+/**
+Theme Name: crarental
+Author: Mike Maltby
+Author URI: http://wpastra.com/about/
+Description: Astra theme customizations for CRARental.org
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: crarental
+Template: astra
+*/
+
+.center-div {
+    text-align: center;
+}
+
+.wp-block-cover {
+    padding-top: 150px;
+}
+
+
+/* Style the Meet the Team Blocks */
+.team-group {
+	padding: 0;
+}
+
+.team-group .wp-block-group__inner-container {
+  display: flex;
+	
+	flex-wrap: wrap;
+	justify-content: center;
+  gap: 1.5em;
+}
+
+.wp-block-uagb-team {
+	flex-basis: 0;
+	background-color: white;
+	border: thin solid;
+	border-radius: 1em;
+	padding: .75em;
+}
+
+.has-ast-global-color-4-background-color .wp-block-uagb-team {
+	background-color: var(--ast-global-color-6)
+}
+
+.wp-block-uagb-team:hover {
+	box-shadow: 5px 5px 5px;
+}
+
+.uagb-team__wrap {
+	height: 100%;
+}
+
+.uagb-team__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.uagb-team__content {
+  display: grid;
+	width: 200px;
+	height: 100%;
+  grid-template-rows: 150px
+ auto 1fr;
+	justify-content:center;
+	padding: 0 1em;
+}
+
+@media screen and (max-width: 720px) and (min-width: 400px) {
+	.wp-block-uagb-team {
+		padding-left: 0;
+	}
+	
+	.uagb-team__content {
+		width: calc(100vw - 6em);
+		grid-template-columns: 150px 1fr;
+		grid-template-rows: auto 1fr;
+	}
+	
+	.uagb-team__image-wrap {
+		grid-column: 1;
+		grid-row: 1 / 3;
+		align-self: center;
+	}
+}
+
+.uagb-team__title-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+h3.uagb-team__title {
+	margin-bottom: 0;
+}
+
+.uagb-team__desc-wrap {
+	align-self: end; 
+}
+/* End Meet the Team Blocks */
